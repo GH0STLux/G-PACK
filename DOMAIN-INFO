@@ -1,0 +1,15 @@
+    def get_info_by_domain(domain_name):
+        try:
+            import socket
+            ip_addr = socket.gethostbyname(domain_name)
+            print("ip address ➤➤➤ ", ip_addr)
+        except Exception as exp:
+            print(exp)
+    my_domain = input("[?] Enter a Domain ➤ ")
+    get_info_by_domain(my_domain)
+    from ipdata import ipdata
+    from pprint import pprint
+    ipdata = ipdata.IPData('d5c0fc206b3d9c6787081c46b4c974a95cf844131fa3175218158a4f')
+    response = ipdata.lookup(socket.gethostbyname(my_domain))
+    pll = '[+]'
+    print(pll, pprint(response))
