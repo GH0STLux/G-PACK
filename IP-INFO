@@ -1,0 +1,7 @@
+ip = input(str('Enter the ipv4 or ipv6 ➤ '))
+    pll = "[+]"
+    from ipdata import ipdata
+    from pprint import pprint
+    ipdata = ipdata.IPData('d5c0fc206b3d9c6787081c46b4c974a95cf844131fa3175218158a4f')
+    response = ipdata.lookup(ip)
+    print(pll,pprint(response))
